@@ -1,0 +1,5 @@
+<!-- Living Ring -->
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <circle cx="256" cy="256" r="240" stroke="#2A2A2A" fill="none" stroke-width="12"/>
+  <path d="M256 80 A176 176 0 0 1 432 256" stroke="#2A2A2A" stroke-width="12" fill="none"/>         <path d="M256 432 A176 176 0 0 1 80 256" stroke="#2A2A2A" stroke-width="12" fill="none"/>         <path d="M256 300 C300 260 320 220 320 200 C300 210 280 230 256 260 C232 230 212 210 192 200 C192 230 224 272 256 300" fill="none" stroke="#2A2A2A" stroke-width="10"/>
+</svg>

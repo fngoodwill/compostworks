@@ -1,0 +1,5 @@
+<!-- Soil Horizon -->
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <circle cx="256" cy="256" r="240" stroke="#2A2A2A" fill="none" stroke-width="12"/>
+  <rect x="76" y="300" width="360" height="110" fill="#6B4E2E"/>         <rect x="76" y="250" width="360" height="50" fill="#B45F3C"/>         <circle cx="256" cy="220" r="8"/>         <path d="M256 228 v32" stroke="#2A2A2A" stroke-width="6"/>         <path d="M256 204 c 20 -20 40 -20 60 0 c -20 8 -40 8 -60 0" fill="none" stroke="#2A2A2A" stroke-width="6"/>
+</svg>
