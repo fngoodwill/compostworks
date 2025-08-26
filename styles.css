@@ -9,3 +9,8 @@
   height: auto;     /* ← let the image decide its height */
   display: block;   /* removes the tiny gap under images */
 }
+@media (min-width: 900px) {
+  .hero-img {
+    max-height: 75vh;   /* cap to 75% of the viewport height */
+  }
+}
