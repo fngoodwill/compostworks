@@ -1,12 +1,35 @@
-/* --- HERO IMAGE: smaller, centered, no cropping --- */
+/* ---------- HERO LAYOUT ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Show the entire meadow; no cropping */
 .hero-img {
   display: block;
-  width: min(100%, 1100px);   /* cap the visual width so it doesn't dominate */
-  max-height: 60vh;           /* keep it from getting too tall on big screens */
-  height: auto;               /* preserve aspect ratio */
-  object-fit: contain;        /* if max-height kicks in, don't crop */
-  margin: 0 auto 1rem;        /* center the image */
+  width: 100%;
+  height: auto;          /* keep aspect ratio, no cropping */
 }
+
+/* Overlay subject ~40% smaller, centered */
+.hero-subject {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: clamp(12px, 3vh, 28px);     /* nudges it up from the bottom */
+  width: clamp(520px, 60vw, 1100px);  /* ≈ 40% smaller overall feel */
+  height: auto;
+  pointer-events: none;
+  filter: drop-shadow(0 10px 24px rgba(0,0,0,.22));
+}
+
+/* Optional: overall content width */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
 
 /* --- TYPE SCALE: ~40% smaller overall --- */
 .hero-copy h1 {
