@@ -36,3 +36,38 @@ p, li {
   margin: 0 auto;
   padding: 0 16px;
 }
+
+/* Full-bleed meadow stays exactly as-is */
+.hero{
+  position: relative;
+  min-height: 62vh;     /* adjust to taste */
+  aspect-ratio: 16/9;   /* keeps a nice banner shape */
+  overflow: hidden;
+}
+.hero-bg{
+  position: absolute;
+  inset: 0;
+  background: url('assets/hero-meadow.jpg') center/cover no-repeat;
+}
+
+/* Scale both overlays to ~60% of the original look */
+.hero-title{
+  position: absolute;
+  top: clamp(8px, 2vh, 18px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(60%, 900px);   /* ≈ 40% smaller than full */
+  height: auto;
+  pointer-events: none;
+}
+
+.hero-subject{
+  position: absolute;
+  left: 50%;
+  bottom: clamp(10px, 3vh, 24px);
+  transform: translateX(-50%);
+  width: min(60%, 1000px);  /* ≈ 40% smaller than full */
+  height: auto;
+  filter: drop-shadow(0 10px 24px rgba(0,0,0,.25));
+  pointer-events: none;
+}
