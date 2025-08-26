@@ -96,6 +96,22 @@ p, li {
 @media (max-width: 768px) {
   .hero-title { transform: translateX(-50%) scale(0.72); }
 }
+.hero { position: relative; }
+.hero-img { display:block; width:100%; height:auto; }        /* meadow plate */
+
+.hero-title {
+  position:absolute; top:2rem; left:50%;
+  transform:translateX(-50%) scale(0.6);   /* ~40% smaller title */
+  transform-origin:top center; pointer-events:none; max-width:90vw; height:auto;
+}
+
+.hero-subject {
+  position:absolute; left:50%;
+  top: clamp(180px, 22vw, 260px);           /* adjust to sit on the stone */
+  transform: translateX(-50%) scale(0.6);   /* ~40% smaller subject */
+  transform-origin: top center;
+  pointer-events:none; height:auto; max-width:90vw;
+}
 
   filter: drop-shadow(0 10px 24px rgba(0,0,0,.25));
   pointer-events: none;
