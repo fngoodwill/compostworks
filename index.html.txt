@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CompostWorks — Human Composting</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <img src="assets/hero.jpg" alt="Earth Bound meadow" class="hero-img" />
+    <div class="hero-copy">
+      <h1>CompostWorks</h1>
+      <p>Earth-friendly NOR (human composting)</p>
+      <a class="cta" href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>What we do</h2>
+      <p>Natural Organic Reduction (NOR) with transparent pricing and certified carbon accounting.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="y"></span> CompostWorks</p>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
