@@ -1,0 +1,9 @@
+# OS/editor cruft
+.DS_Store
+Thumbs.db
+*.log
+
+# Archives & dumps (keep big bundles out of git)
+*.zip
+*.7z
+*.tar*
