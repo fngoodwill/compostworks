@@ -1,0 +1,102 @@
+/* --- HERO IMAGE: smaller, centered, no cropping --- */
+.hero-img {
+  display: block;
+  width: min(100%, 1100px);   /* cap the visual width so it doesn't dominate */
+  max-height: 60vh;           /* keep it from getting too tall on big screens */
+  height: auto;               /* preserve aspect ratio */
+  object-fit: contain;        /* if max-height kicks in, don't crop */
+  margin: 0 auto 1rem;        /* center the image */
+}
+
+/* --- TYPE SCALE: ~40% smaller overall --- */
+.hero-copy h1 {
+  font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+}
+.hero-copy p {
+  font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+}
+
+h2 {
+  font-size: clamp(1.1rem, 2.0vw, 1.4rem);
+}
+p, li {
+  font-size: clamp(0.95rem, 1.5vw, 1.0rem);
+}
+
+/* Contact button slightly smaller as well */
+.cta {
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+}
+
+/* Optional: keep body content from stretching too wide */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Full-bleed meadow stays exactly as-is */
+.hero{
+  position: relative;
+  min-height: 62vh;     /* adjust to taste */
+  aspect-ratio: 16/9;   /* keeps a nice banner shape */
+  overflow: hidden;
+}
+.hero-bg{
+  position: absolute;
+  inset: 0;
+  background: url('assets/hero-meadow.jpg') center/cover no-repeat;
+}
+
+/* Scale both overlays to ~60% of the original look */
+.hero-title{
+  position: absolute;
+  top: clamp(8px, 2vh, 18px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(60%, 900px);   /* ≈ 40% smaller than full */
+  height: auto;
+  pointer-events: none;
+}
+
+.hero-subject{
+  position: absolute;
+  left: 50%;
+  bottom: clamp(10px, 3vh, 24px);
+  transform: translateX(-50%);
+  width: min(60%, 1000px);  /* ≈ 40% smaller than full */
+  height: auto;
+  /* Hero layout */
+.hero {
+  position: relative;
+}
+
+/* Show the entire meadow image with no cropping */
+.hero-img {
+  display: block;
+  width: 100%;
+  height: auto;           /* ensures no cropping */
+}
+
+/* Letters overlay (~60% of original), centered at top */
+.hero-title {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%) scale(0.6);  /* 40% smaller */
+  transform-origin: top center;
+  height: auto;
+  max-width: 90vw;        /* don’t overflow on small screens */
+  pointer-events: none;
+}
+
+/* Slightly bigger on phones if you want */
+@media (max-width: 768px) {
+  .hero-title { transform: translateX(-50%) scale(0.72); }
+}
+
+  filter: drop-shadow(0 10px 24px rgba(0,0,0,.25));
+  pointer-events: none;
+}
