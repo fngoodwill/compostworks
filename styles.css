@@ -1,13 +1,4 @@
-/* HERO */
-.hero {
-  position: relative;
-  margin: 0;
-}
-
-.hero-img {
-  width: 100%;
-  height: auto;     /* ← let the image decide its height */
-  display: block;   /* removes the tiny gap under/* --- HERO IMAGE: smaller, centered, no cropping --- */
+/* --- HERO IMAGE: smaller, centered, no cropping --- */
 .hero-img {
   display: block;
   width: min(100%, 1100px);   /* cap the visual width so it doesn't dominate */
@@ -44,11 +35,4 @@ p, li {
   max-width: 980px;
   margin: 0 auto;
   padding: 0 16px;
-}
- images */
-}
-@media (min-width: 900px) {
-  .hero-img {
-    max-height: 75vh;   /* cap to 75% of the viewport height */
-  }
 }
