@@ -7,7 +7,45 @@
 .hero-img {
   width: 100%;
   height: auto;     /* ← let the image decide its height */
-  display: block;   /* removes the tiny gap under images */
+  display: block;   /* removes the tiny gap under/* --- HERO IMAGE: smaller, centered, no cropping --- */
+.hero-img {
+  display: block;
+  width: min(100%, 1100px);   /* cap the visual width so it doesn't dominate */
+  max-height: 60vh;           /* keep it from getting too tall on big screens */
+  height: auto;               /* preserve aspect ratio */
+  object-fit: contain;        /* if max-height kicks in, don't crop */
+  margin: 0 auto 1rem;        /* center the image */
+}
+
+/* --- TYPE SCALE: ~40% smaller overall --- */
+.hero-copy h1 {
+  font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+}
+.hero-copy p {
+  font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+}
+
+h2 {
+  font-size: clamp(1.1rem, 2.0vw, 1.4rem);
+}
+p, li {
+  font-size: clamp(0.95rem, 1.5vw, 1.0rem);
+}
+
+/* Contact button slightly smaller as well */
+.cta {
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+}
+
+/* Optional: keep body content from stretching too wide */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+ images */
 }
 @media (min-width: 900px) {
   .hero-img {
