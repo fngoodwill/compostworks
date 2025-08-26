@@ -68,6 +68,35 @@ p, li {
   transform: translateX(-50%);
   width: min(60%, 1000px);  /* ≈ 40% smaller than full */
   height: auto;
+  /* Hero layout */
+.hero {
+  position: relative;
+}
+
+/* Show the entire meadow image with no cropping */
+.hero-img {
+  display: block;
+  width: 100%;
+  height: auto;           /* ensures no cropping */
+}
+
+/* Letters overlay (~60% of original), centered at top */
+.hero-title {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%) scale(0.6);  /* 40% smaller */
+  transform-origin: top center;
+  height: auto;
+  max-width: 90vw;        /* don’t overflow on small screens */
+  pointer-events: none;
+}
+
+/* Slightly bigger on phones if you want */
+@media (max-width: 768px) {
+  .hero-title { transform: translateX(-50%) scale(0.72); }
+}
+
   filter: drop-shadow(0 10px 24px rgba(0,0,0,.25));
   pointer-events: none;
 }
